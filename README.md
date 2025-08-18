@@ -1,5 +1,15 @@
 # Week4
 
+## Commands used
+- Create app: `ng new week4 --standalone --style=css`
+- Install Bootstrap: `npm install bootstrap --save`
+- Link Bootstrap (angular.json): add `bootstrap.min.css` to "styles" and `bootstrap.bundle.min.js` to "scripts"
+- Generate components: 
+  - `ng g c home --standalone --skip-tests`
+  - `ng g c login --standalone --skip-tests`
+  - `ng g c profile --standalone --skip-tests`
+- Serve: `ng serve -o`
+- 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.4.
 
 ## Development server
