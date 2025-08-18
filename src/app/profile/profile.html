@@ -1,6 +1,35 @@
 <h2 class="mb-3">Profile Page</h2>
-<img
-  class="img-fluid rounded d-block w-100"
-  src="assets/images/profile/profile-banner.jpg"
-  alt="Profile banner"
-/>
+
+<form *ngIf="user" (ngSubmit)="saveProfile()" class="card p-3" novalidate>
+  <div class="mb-3">
+    <label class="form-label" for="username">Username</label>
+    <input id="username" class="form-control" name="username"
+           [(ngModel)]="user.username" required />
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label" for="birthdate">Birthdate</label>
+    <input id="birthdate" type="date" class="form-control" name="birthdate"
+           [(ngModel)]="user.birthdate" required />
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label" for="age">Age</label>
+    <input id="age" type="number" class="form-control" name="age"
+           [(ngModel)]="user.age" min="0" required />
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label" for="email">Email</label>
+    <input id="email" type="email" class="form-control" name="email"
+           [(ngModel)]="user.email" required />
+  </div>
+
+  <div class="form-check mb-3">
+    <input class="form-check-input" type="checkbox" [checked]="user.valid" disabled />
+    <label class="form-check-label">Valid</label>
+  </div>
+
+  <button class="btn btn-primary" type="submit">Save</button>
+  <div *ngIf="saved" class="alert alert-success mt-3">Profile saved.</div>
+</form>
