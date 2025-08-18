@@ -1,12 +1,15 @@
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
   <div class="container-fluid">
-    <ul class="nav navbar-nav">
-      <li class="active"><a class="nav-link" routerLink="/">Home</a></li>
-      <li> <a class="nav-link" routerLink="/login">Login</a></li>
-      <li><a class="nav-link" routerLink="/profile">Profile</a></li>
+    <a class="navbar-brand" routerLink="/">Week 5</a>
+
+    <ul class="navbar-nav me-auto">
+      <li class="nav-item"><a class="nav-link" routerLink="/">Home</a></li>
+      <li class="nav-item"><a class="nav-link" routerLink="/login">Login</a></li>
+      <li class="nav-item"><a class="nav-link" routerLink="/profile">Profile</a></li>
     </ul>
+
+    <button class="btn btn-outline-danger" (click)="logout()">Logout</button>
   </div>
 </nav>
-<div class="container">
+
 <router-outlet></router-outlet>
-</div>
