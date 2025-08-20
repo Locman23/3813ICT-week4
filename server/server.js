@@ -5,22 +5,22 @@ const bodyParser = require("body-parser");
 const app = express();
 
 app.use(cors({
-  origin: 'http://localhost:4200',  // Angular dev server
+  origin: 'http://localhost:4200', // allow requests from this origin
   methods: ['POST', 'GET', 'OPTIONS'],
   allowedHeaders: ['Content-Type']
 }));
 
 app.use(bodyParser.json());
 
-// Class & in-memory users (3)
+
 class User {
   constructor(username, birthdate, age, email, password, valid = false) {
     this.username = username;
     this.birthdate = birthdate;
     this.age = age;
     this.email = email;
-    this.password = password; // never return this to the client
-    this.valid = valid;
+    this.password = password; 
+    this.valid = valid; 
   }
 }
 
@@ -33,14 +33,14 @@ const users = [
 // POST /api/auth -> check credentials
 app.post("/api/auth", (req, res) => {
   const { email, password } = req.body || {};
-  const match = users.find(u => u.email === email && u.password === password);
+  const match = users.find(u => u.email === email && u.password === password); 
 
   if (!match) {
-    return res.json({ valid: false }); // no leak of info
+    return res.json({ valid: false }); 
   }
 
-  // copy user but exclude password, set valid true
-  const { password: _omit, ...userData } = { ...match, valid: true };
+
+const { password: _omit, ...userData } = { ...match, valid: true };
   return res.json(userData);
 });
 
