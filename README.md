@@ -1,7 +1,7 @@
 # Week4
 
 ## Commands used
-- Create app: `ng new week4 --standalone --style=css`
+- Create app: `ng new week4`
 - Install Bootstrap: `npm install bootstrap --save`
 - Link Bootstrap (angular.json): add `bootstrap.min.css` to "styles" and `bootstrap.bundle.min.js` to "scripts"
 - Generate components: 
