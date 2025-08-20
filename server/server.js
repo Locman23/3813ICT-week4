@@ -25,9 +25,9 @@ class User {
 }
 
 const users = [
-  new User("john",  "1995-01-01", 30, "john@example.com",  "12345"),
-  new User("sarah", "1998-05-12", 27, "sarah@example.com", "pass123"),
-  new User("liam",  "2000-09-20", 25, "liam@example.com",  "qwerty")
+  new User("lachlan",  "1995-01-01", 22, "lachlan@example.com",  "12345"),
+  new User("sarah", "1998-05-12", 20, "sarah@example.com", "letmein"),
+  new User("dylan",  "2000-09-20", 28, "dylan@example.com",  "password123")
 ];
 
 // POST /api/auth -> check credentials
